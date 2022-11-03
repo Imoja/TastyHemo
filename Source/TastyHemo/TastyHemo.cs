@@ -5,11 +5,11 @@ using RimWorld;
 using UnityEngine;
 using HarmonyLib;
 
-namespace TastyHemoBeta
+namespace TastyHemo
 {
-	public class Mod : Verse.Mod
+	public class IMJ_Mod : Verse.Mod
 	{
-		public Mod(ModContentPack content) : base(content)
+		public IMJ_Mod(ModContentPack content) : base(content)
 		{
 
 			new Harmony("Imoja.rimworld.TastyHemoBeta.main").PatchAll();
@@ -18,12 +18,12 @@ namespace TastyHemoBeta
 		public override void DoSettingsWindowContents(Rect inRect)
 		{
 			base.DoSettingsWindowContents(inRect);
-			GetSettings<Settings>().DoWindowContents(inRect);
+			GetSettings<IMJ_Settings>().DoWindowContents(inRect);
 		}
 
 		public override string SettingsCategory()
 		{
-			return "TastyHemoBeta";
+			return "TastyHemo";
 		}
 	}
 }

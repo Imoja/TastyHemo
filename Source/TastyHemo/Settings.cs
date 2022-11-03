@@ -7,14 +7,14 @@ using System.Linq;
 using RimWorld;
 using Verse.Sound;
 
-namespace TastyHemoBeta
+namespace TastyHemo
 {
 	internal class DefaultValues
 	{
 		public const float TastyHemo_NutritionfromBloodFeed = 0.2f;
 		public const float TastyHemo_NutritionfromHemogenPack = 1.0f;
 	}
-	public class Settings : ModSettings
+	public class IMJ_Settings : ModSettings
 	{
 
 		public static float TH_NutritionfromBloodFeed = DefaultValues.TastyHemo_NutritionfromBloodFeed;

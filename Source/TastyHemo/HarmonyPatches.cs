@@ -5,7 +5,7 @@ using RimWorld;
 using UnityEngine;
 using HarmonyLib;
 
-namespace TastyHemoBeta.HarmonyPatches
+namespace TastyHemo.HarmonyPatches
 {
 	// The contents of this file were typed under the most gracious tutelage of "Feldoh - The Third Guava".
 	[HarmonyPatch(typeof(SanguophageUtility), "DoBite")]
@@ -16,7 +16,7 @@ namespace TastyHemoBeta.HarmonyPatches
 			if (!victim.Dead)
 			{
 				biter.needs.mood?.thoughts?.memories?.TryGainMemory(ThoughtDef.Named("IMJ_LavishSippy"));
-				nutritionGain = Settings.TH_NutritionfromBloodFeed * victim.BodySize;
+				nutritionGain = IMJ_Settings.TH_NutritionfromBloodFeed * victim.BodySize;
 			}
 			else
 			{
