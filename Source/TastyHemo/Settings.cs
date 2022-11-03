@@ -16,18 +16,19 @@ namespace TastyHemo
 	}
 	public class IMJ_Settings : ModSettings
 	{
-
 		public static float TH_NutritionfromBloodFeed = DefaultValues.TastyHemo_NutritionfromBloodFeed;
+		public static float TH_NutritionfromHemogenPack = DefaultValues.TastyHemo_NutritionfromHemogenPack;
 
 		public void DoWindowContents(Rect inRect)
 		{
 			var options = new Listing_Standard();
 			options.Begin(inRect);
-
-			options.Label("Food gained from BloodFeeding : " + TH_NutritionfromBloodFeed.ToString("0.00") + " (1.0 is 100%)");
-			TH_NutritionfromBloodFeed = options.Slider(TH_NutritionfromBloodFeed, 0.00f, 2.00f);
-
 			options.Gap();
+			options.Label("Food the Biter gains from BloodFeeding on Living Pawns: " + TH_NutritionfromBloodFeed.ToString("0.00") + " (1.0 is 100%)");
+			TH_NutritionfromBloodFeed = options.Slider(TH_NutritionfromBloodFeed, 0.00f, 2.00f);
+			options.Gap();
+			options.Label("Food the Drinker gains from Consuming HemogenPacks : " + TH_NutritionfromHemogenPack.ToString("0.00") + " (1.0 is 100%)");
+			TH_NutritionfromHemogenPack = options.Slider(TH_NutritionfromHemogenPack, 0.00f, 2.00f);
 
 			options.End();
 		}
