@@ -19,19 +19,6 @@
 <value> <tasteThought>IMJ_FineSippy</tasteThought> </value>
 </li>
 
-<!-- Modify the Surgery anesthezia-->
-<li Class="PatchOperationAdd">
-<xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]</xpath>
-<value>
-<anesthetize>false</anesthetize>
-</value>
-</li>
-
-<!-- Modify the Surgery ingredients -->
-<li Class="PatchOperationRemove">
-<xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]/ingredients</xpath>
-</li>
-
     </operations>
   </Operation>
 </Patch>

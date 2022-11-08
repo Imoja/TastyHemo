@@ -19,14 +19,14 @@ namespace TastyHemo.HarmonyPatches
 				if (IMJ_Settings.TH_MoodletfromBloodFeed) {
 					biter.needs.mood?.thoughts?.memories?.TryGainMemory(ThoughtDef.Named("IMJ_LavishSippy"));
 				}
-			}
+			}/*
 			else
 			{
-				nutritionGain = 0.5f * victim.BodySize;
+				nutritionGain = 0.2f * victim.BodySize;
 				if (IMJ_Settings.TH_MoodletfromBloodFeed) {
 					biter.needs.mood?.thoughts?.memories?.TryGainMemory(ThoughtDef.Named("IMJ_BadSippy"));
 				}
-			}
+			}*/
 			return true;
 		}
 	}
